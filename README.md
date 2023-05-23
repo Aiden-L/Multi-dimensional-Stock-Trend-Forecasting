@@ -25,12 +25,12 @@
 ### 价格相关数据预测
 该部分在文件夹`price-prediction`中，运用 RNN, LSTM, GRU 探究多个特征对股票预测准确度的影响
 
-#### 制作数据集
+#### 1. 制作数据集
 数据爬取方面正在整理中，后续更新，敬请期待
 
 数据格式可以参考`price-prediction/data`中的形式，因模型可以针对多特征构建，根据`price-prediction/model_builder.py`中注释提示即可根据需要，将所需多列作为多维特征训练和应用模型，因此，每列代表的意义也无需完全按照模板对应（开盘价，收盘价等）
 
-#### RNN, LSTM, GRU 模型构建及预测应用
+#### 2. RNN, LSTM, GRU 模型构建及预测应用
 模型训练，断点建立`price-prediction/model_builder.py`
 应用模型进行预测`price-prediction/predictor.py`
 
@@ -38,7 +38,7 @@
 
 该部分在文件夹`text-prediction`中，运用词向量/随机森林预测评论情感倾向
 
-#### 制作数据集
+#### 1. 制作数据集
 1. 运行`makedataset/get300code.py`获得`makedataset/300code.json`存有沪深300股票代号数组
 2. 运行`makedataset/getdata.py`获得300支股票的资讯文本信息，包括【内容，作者，时间】，300份csv文件存储在`makedataset/data`文件夹下
 3. 运行`makedataset/getkStockPriceData.py`获得300支股票的价格和时间对应数据信息，索引为`priceobj["seq"]`包括字典所有索引的数组，
@@ -47,7 +47,7 @@
 4. 运行`makedataset/makeDataset.py`制作情感分类数据集，生成`makedataset/dataset/neg.csv`和`makedataset/dataset/pos.csv`，
 结合标签的组合型csv`makedataset/dataset/combined.csv`
 
-#### 词向量/随机森林预测
+#### 2. 词向量/随机森林预测
 1. 运行`textClassification/trainVectorModelCreator.py`通过`combined.csv`训练词向量模型，存为
 `textClassification/w2v_model_300_for_create_vector.pkl`
 2. 运行`textClassification/generateVectors.py`读取`combined.csv`将其中的所有句子转化为词向量存为npy，放在
