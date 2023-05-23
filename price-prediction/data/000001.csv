@@ -1,0 +1,3 @@
+date,open,close,high,low,volume,turn volume,amplitude,decline/Increase rate(%),decline/Increase volume,turnover rate(%)
+1991/1/3,128.84,130.14,130.14,128.84,141,93000,1.01,1.01,1.3,0
+注: 此csv只为样例，模型适用于各种形式数据，每列所代表的值也不用一一对应,,,,,,,,,,

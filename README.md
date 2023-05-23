@@ -1,7 +1,12 @@
 # Multi-dimensional Stock Trend Forecasting
 
+> 该项目适用于多特征的 RNN, LSTM, GRU 神经网络的应用，以及基于词向量/随机森林的文本情感分析
+> 
+> 版权声明：该项目遵循 GPL3.0 开源协议，未经授权不得抄袭，转载
+
 #### 软件架构
 * Python 3.7
+* Tensorflow 2.1
 
 #### 安装说明
 1. 安装依赖`pip install -r requirements.txt`
@@ -15,13 +20,19 @@
    tensorflow 安装教程详见 <https://blog.csdn.net/weixin_46065314/article/details/109571907>
 
 #### 模型说明
-
 该项目分为两个部分，价格相关数据的预测和文本情感相关的预测
 
 ### 价格相关数据预测
-
 该部分在文件夹`price-prediction`中，运用 RNN, LSTM, GRU 探究多个特征对股票预测准确度的影响
 
+#### 制作数据集
+数据爬取方面正在整理中，后续更新，敬请期待
+
+数据格式可以参考`price-prediction/data`中的形式，因模型可以针对多特征构建，根据`price-prediction/model_builder.py`中注释提示即可根据需要，将所需多列作为多维特征训练和应用模型，因此，每列代表的意义也无需完全按照模板对应（开盘价，收盘价等）
+
+#### RNN, LSTM, GRU 模型构建及预测应用
+模型训练，断点建立`price-prediction/model_builder.py`
+应用模型进行预测`price-prediction/predictor.py`
 
 ### 文本情感预测
 
