@@ -4,11 +4,11 @@
 > 
 > 版权声明：该项目遵循 GPL3.0 开源协议，未经授权不得抄袭，转载
 
-#### 软件架构
+## 软件架构
 * Python 3.7
 * Tensorflow 2.1
 
-#### 安装说明
+## 安装说明
 1. 安装依赖`pip install -r requirements.txt`
 2. 深度学习框架请使用conda安装
     * `conda install cudatoolkit=10.1`
@@ -19,7 +19,7 @@
    
    tensorflow 安装教程详见 <https://blog.csdn.net/weixin_46065314/article/details/109571907>
 
-#### 模型说明
+## 模型说明
 该项目分为两个部分，价格相关数据的预测和文本情感相关的预测
 
 ### 价格相关数据预测
