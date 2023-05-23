@@ -22,7 +22,7 @@
 ## 模型说明
 该项目分为两个部分，价格相关数据的预测和文本情感相关的预测
 
-### 价格相关数据预测
+### - 价格相关数据预测 -
 该部分在文件夹`price-prediction`中，运用 RNN, LSTM, GRU 探究多个特征对股票预测准确度的影响
 
 #### 1. 制作数据集
@@ -34,7 +34,7 @@
 模型训练，断点建立`price-prediction/model_builder.py`
 应用模型进行预测`price-prediction/predictor.py`
 
-### 文本情感预测
+### - 文本情感预测 -
 
 该部分在文件夹`text-prediction`中，运用词向量/随机森林预测评论情感倾向
 
